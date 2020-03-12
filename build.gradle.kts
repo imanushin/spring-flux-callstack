@@ -2,6 +2,7 @@ import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 import org.jetbrains.kotlin.config.JvmTarget
 
 plugins {
+    application
     kotlin("jvm") version embeddedKotlinVersion
 }
 
@@ -21,4 +22,8 @@ tasks {
             jvmTarget = "12"
         }
     }
+}
+
+application {
+    mainClassName="com.github.imanushin.spring.flux.callstack.ProblematicConfigurationKt"
 }
